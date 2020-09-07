@@ -1,0 +1,48 @@
+{
+    "name": "watermark-telegram-bot",
+    "description": "this bot can add watermark to your photos",
+    "keywords": [
+        "telegram",
+        "watermark",
+        "bot"
+    ],
+    "repository": "https://github.com/rking32/watermark-telegram-bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Telegram bot token. From Bot_Father"
+        },
+        "WATERMARK": {
+            "description": "Enter your watermark",
+            "value": "...watermark...",
+            "required": false
+        },
+        "FONT_SIZE": {
+            "description": "Font size",
+            "value": "15",
+            "required": false
+        },
+        "TRANSPARENCY": {
+            "description": "Font transparency",
+            "value": "0.75",
+            "required": false
+        },
+        "QUALITY": {
+            "description": "Image quality",
+            "value": "100",
+            "required": false
+        }
+    },
+    "addons": [
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
